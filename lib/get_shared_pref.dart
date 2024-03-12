@@ -1,4 +1,4 @@
-import 'package:sharedprefproj/shared_preferences.dart';
+import 'package:sharedprefproj/shared_preferences_class.dart';
 
 import 'main.dart';
 import 'package:flutter/material.dart';

@@ -1,9 +1,9 @@
 import 'package:shared_preferences/shared_preferences.dart';
-
-import 'main.dart';
 import 'package:flutter/material.dart';
+
+
 class SharedPreferencesScreen extends StatefulWidget {
-  const SharedPreferencesScreen({Key? key}) : super(key: key);
+  const SharedPreferencesScreen({super.key});
 
   @override
   State<SharedPreferencesScreen> createState() => _SharedPreferencesScreenState();
@@ -50,26 +50,33 @@ class _SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
       ),
       body: Column(
         children: [
-          Text(name),
+          Text(name,
+            style: const TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async{
+
+
           SharedPreferences sp = await SharedPreferences.getInstance();
 
-          sp.setString('string', 'Muhammad Hamza');
-          sp.setInt('age', 24);
-          sp.setDouble('weight', 60.5);
+          sp.setString('string', 'Muhammad Bilal');
+          sp.setInt('int', 25);
+          sp.setDouble('weight', 60.4);
           sp.setBool('login', true);
+
 
 
            name = sp.getString('string') ?? '';
 
 
 
-
           print(sp.getString('string'));
-          print(sp.getInt('age'));
+          print(sp.getInt('int'));
           print(sp.getDouble('weight'));
           print(sp.getBool('login'));
 

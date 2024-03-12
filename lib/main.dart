@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sharedprefproj/show_values_screen.dart';
+import 'package:sharedprefproj/basic_shared_pref.dart';
 
 void main() {
   runApp(const MyApp());
