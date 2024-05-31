@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sharedprefproj/basic_shared_pref.dart';
+
+import 'get_shared_pref.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SharedPreferencesScreen()
+      home: GetValueSharedPref()
     );
   }
 }

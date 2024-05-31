@@ -7,6 +7,7 @@ class GetValueSharedPref extends StatefulWidget {
 
   @override
   State<GetValueSharedPref> createState() => _GetValueSharedPrefState();
+
 }
 
 class _GetValueSharedPrefState extends State<GetValueSharedPref> {
@@ -17,7 +18,9 @@ class _GetValueSharedPrefState extends State<GetValueSharedPref> {
 
     @override
   void initState() {
+
     super.initState();
+
   }
 
 

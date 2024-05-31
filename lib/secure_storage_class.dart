@@ -1,29 +1,19 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
-
 class SecureStorageClient{
 
-  //  create a instance
+  // create a private constructor
+  SecureStorageClient._();
 
-  final FlutterSecureStorage storage = const FlutterSecureStorage();
-
-
-       Future<void> writeSecureData(String name, String age) async {
-
-       await storage.write(key: name, value: age);
-
-
+  static final SecureStorageClient _secureStorageClient = SecureStorageClient._();
+  static SecureStorageClient get instance => _secureStorageClient;
+  factory SecureStorageClient()
+  {
+      return _secureStorageClient;
   }
 
+   final _storage = const FlutterSecureStorage();
 
-         Future readSecureData(key) async {
-
-         String  value  = await storage.read(key: key) ?? 'no data!';
-
-         print('Data read from secure storage: $value');
-
-
-        }
 
 
 }
